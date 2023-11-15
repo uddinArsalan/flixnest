@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+body{
+    background-color: rgb(231, 229, 226);
+}
+
+.navbar{
+    /* background-image: linear-gradient(to right,red,rgb(255, 75, 75)) ; */
+    /* background-image: linear-gradient(to right,purple,rgb(247, 3, 235)) ; */
+    grid-area: nav;
+    background-color: #222222;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    padding: 1.8rem;
+    width: auto;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.logo span{
+    font-size: 2rem;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.logo img {
+    width: 2em;
+}
+
+.trending{
+    width: 23px;
+    margin-left: 36px;
+}
+
+.nav--content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav--input{
+    padding: 12px;
+    width: 300px;
+    border-radius: 23px;
+    margin: 0;
+    /* box-shadow: 2px 2px 2px red; */
+    /* box-shadow: 2px 2px 2px purple; */
+    box-shadow: 3px 3px 3px black;
+    border: none;
+    /* background-color: rgb(240, 80, 80); */
+    /* background-color: rgb(247, 3, 235); */
+    background-color: white;
+}
+
+::-webkit-input-placeholder{
+    color: #121212;
+    font-size: 1em;
+}
+
+.nav--bar{
+    display: none;
+    width: 23px;
+    background-color: #121212;
+    cursor: pointer;
+}
+
+.click--bar{
+    display: none;
+    z-index: 0;
+}
+
+.click--bar--show{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        align-items:center;
+        flex-direction: column;
+        height: 200px;
+        color: white;
+        /* background-color: red; */
+        /* background-color: rgb(247, 3, 235); */
+        background-color: #222222;
+        position: fixed;
+        top: 85px;
+        z-index: 2;
+}
+
+
+.nav--bar__img{
+    width: 63px;
+    border-radius: 50%;
+}
+.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav--bar__name{
+    color :#f5f5f5;
+    font-size: 1.6em;
+}
+
+.nav--bar__input{
+    width: 233px;
+    padding: 12px;
+    border-radius: 23px;
+    /* box-shadow: 2px 2px 2px red; */
+    /* box-shadow: 2px 2px 2px rgb(247, 3, 235); */
+    border: none;
+    /* background-color: rgb(240, 80, 80); */
+    /* background-color: purple; */
+    /* background-color: #526D82; */
+    background-color: white;
+    color: black;
+}
+
+@media screen and (max-width : 600px) {
+    .nav--user{
+        display: none;
+    }
+    .nav--input{
+        display: none;
+    }
+    .nav--bar{
+        display: block;
+    }
+}
+
+.nav--name{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #f5f5f5;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nav--img{
+    width: 3rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 53px;
+    right: 33px;
+    margin-top: 8px;
+    border: 0.3px solid white;
+    background-color: white;
+}
+
+.nav--first{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: space-between;
+}
+
+
+.section{
+    display: flex;
+    /* background-color: rgb(49, 48, 48); */
+    background-color: #191919;
+    width: 450px;
+    /* position: fixed;
+    bottom: 0; */
+    /* top: 20%;
+    left: 0;  */
+    height: auto;
+    flex-direction: column;
+    color: white;
+}
+
+.small-screen{
+    width: 53px;
+    height: 53px;
+    border-radius: 6px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.circle-1{
+    background-color: gray;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+}
+
+.circle{
+    background-color: rgb(59, 59, 59);
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:870px){
+    .section{
+        display: none;
+    }
+}
+
+@media screen and (min-width:870px){
+    .small-screen{
+        display: none;
+    }
+    .small-sidebar{
+        display: none;
+    }
+}
+
+.section--list{
+    list-style: none;
+    padding: 23px;
+    cursor: pointer;
+    color: #f5f5f5;
+}
+
+.section--comment{
+    padding: 23px;
+}
+
+li{
+    padding: 13px;
+}
+
+li:hover{
+    background-color: black;
+    border-radius: 12px;
+    /* color: rgb(240, 80, 80); */
+    /* color: rgb(247, 3, 235); */
+    color: #2196f3;
+}
+.sidebar--cross{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 0;
+    background-color: black;
+}
+
+.cross{
+    width: 32px;
+    cursor: pointer;
+}
+
+.section--logo{
+    color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    display: flex;
+}
+
+.movie--section{
+    color :#e0e0e0;
+    background-color: rgb(71, 70, 70);
+    background-color: #121212;
+    width: 100vw;
+    /* grid-area: movie;
+    position: absolute;
+    right: 0; */
+    /* position: relative; */
+    padding: 34px;
+}
+
+.top--title{
+    padding: 34px;
+    text-align: center;
+}
+
+.movies{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 23px;
+    padding: 0;
+    min-height: 100vh;
+}
+
+@media screen and (max-width : 1170px){
+    .movies{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 23px;
+        place-items: center;
+    }
+}
+
+@media screen and (max-width : 680px){
+    .movies{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 23px;
+        place-items: center;
+    }
+}
+
+.movie--img{
+    width: 250px;
+    height: 350px;
+    cursor: pointer;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.skeleton{
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+.skeleton-text{
+    width: 100%;
+    height: 0.5rem;
+    margin-bottom: .25rem;
+    border-radius: .125rem;
+}
+
+.skeleton-text:last-child{
+    width: 80%;
+    margin-bottom: 0;
+}
+
+@keyframes skeleton-loading {
+    0%{
+        background-color: hsl(200, 20%, 70%);
+    }
+    100%{
+        background-color: hsl(200, 20%, 95%);
+    }
+}
+
+@media screen and (max-width:360px){
+    .movie--img{
+        width: 220px;
+        height: 280px;
+    }
+
+}
+.movie-1{
+    color: #e0e0e0 ;
+    margin: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.movie-1:hover{
+    transform: scale3d(1.1,1.1,1.1);
+    transition-duration: 0.5s;
+}
+
+.movie--desc{
+    font-size: small;
+    color: gray;
+    margin-top: 3px;
+    font-weight: bold;
+    /* color: #f5f5f5; */
+}
+
+.position{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#preloader{
+    background: #000 url(giphy.webp) no-repeat center;
+    background-size: 4%;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+}
+
+.hide{
+    display: none;
+}
+
+.footer{
+    background-color:  #191919;
+    grid-area: footer;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+}
+
+.lastActivity{
+    font-size: 1.3rem;
+    font-style:normal;
+    word-spacing: 2px;
+    color: #007bff;
+    margin-top: 27px;
+}
+.smallastActivity{
+    font-size: 1.3rem;
+    font-style:normal;
+    word-spacing: 2px;
+    color: #007bff;
+    margin-top: 27px;
+}
+.smallbookActivity{
+    font-size: 1.3rem;
+    font-style:normal;
+    word-spacing: 2px;
+    color: #007bff;
+    margin-top: 27px;
+}
+.bookActivity{
+    font-size: 1.3rem;
+    font-style:normal;
+    word-spacing: 2px;
+    color: #007bff;
+    margin-top: 27px;
+}
+
+.skeleton{
+    opacity: 0.7;
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+    from {
+        background-color: hsl(200, 20%, 70%);
+    }
+    to{
+        background-color: hsl(200, 20%, 95%);
+    }
+}
